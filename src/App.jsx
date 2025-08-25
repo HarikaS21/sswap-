@@ -1,23 +1,20 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
-import Home from './pages/Home'
-import Login from './pages/Login'
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import JobListings from "./pages/JobListings";
+import SkillExchange from "./pages/SkillExchange";  // ✅ Import here
 
 function App() {
-
-
   return (
-   <>
-   <BrowserRouter>
-   <Routes>
-    <Route path="/"   element={<Home/>} />
-    <Route path="/login"   element={<Login/>} />
-   </Routes>
-   </BrowserRouter>
-   </>
-    
-    
-  )
+    <Router>
+      <div className="min-h-screen bg-gray-50 text-gray-900">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/jobs" element={<JobListings />} />
+          <Route path="/skills" element={<SkillExchange />} /> {/* ✅ New Route */}
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
