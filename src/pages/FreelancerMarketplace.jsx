@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Star } from "lucide-react";
-// import Navbar from "../components/Navbar";
-// import Sidebar from "../components/Sidebar";
+//import Navbar from "../components/Navbar";
+//import Sidebar from "../components/Sidebar";
+
 const freelancers = [
   {
     id: 1,
@@ -50,29 +51,29 @@ export default function FreelanceMarketplace() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      {/* ✅ Navbar at top */}
+      {/* Navbar */}
       {/* <Navbar /> */}
 
       <div className="flex flex-1">
-        {/* ✅ Sidebar (hidden on small screens, shows on md+) */}
+        {/* Sidebar */}
         {/* <div className="hidden md:block w-64">
           <Sidebar />
         </div> */}
 
-        {/* ✅ Main Content */}
+        {/* Main Content */}
         <div className="flex-1 flex flex-col p-4 sm:p-6">
           {/* Header */}
-          <h1 className="font-[Outfit] text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#171A1F]">
+          <h1 className="font-sans text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#171A1F]">
             Freelancer Marketplace
           </h1>
-          <p className="mt-2 max-w-2xl text-sm sm:text-base lg:text-lg font-[Open_Sans] text-[#565D6D]">
+          <p className="mt-2 max-w-2xl text-sm sm:text-base lg:text-lg font-sans text-[#585a5f]">
             Discover top talent for your projects. Browse portfolios, filter by
             skills, and connect with professionals tailored to your needs.
           </p>
 
           {/* Filters Section */}
           <div className="mt-6 bg-white p-4 sm:p-6 rounded-[10px] border border-[#DEE1E6] shadow-sm">
-            <h2 className="font-[Outfit] text-lg sm:text-xl lg:text-2xl font-semibold text-[#171A1F] mb-4">
+            <h2 className="font-sans text-lg sm:text-xl lg:text-2xl font-semibold text-[#171A1F] mb-4">
               Find Your Talent
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -80,7 +81,7 @@ export default function FreelanceMarketplace() {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full sm:w-48 h-10 px-3 text-sm sm:text-base font-[Open_Sans] text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md"
+                className="w-full sm:w-48 h-10 px-3 text-sm sm:text-base font-sans text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md"
               >
                 <option value="">Category</option>
                 {categories.map((cat, i) => (
@@ -92,11 +93,11 @@ export default function FreelanceMarketplace() {
               <input
                 type="text"
                 placeholder="Search by Skill..."
-                className="flex-1 min-w-[150px] h-10 px-3 text-sm sm:text-base font-[Open_Sans] text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md"
+                className="flex-1 min-w-[150px] h-10 px-3 text-sm sm:text-base font-sans text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md"
               />
 
               {/* Rating */}
-              <select className="w-full sm:w-40 h-10 px-3 text-sm sm:text-base font-[Open_Sans] text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md">
+              <select className="w-full sm:w-40 h-10 px-3 text-sm sm:text-base font-sans text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md">
                 <option>Min. Rating</option>
                 {ratings.map((rate, i) => (
                   <option key={i}>{rate}</option>
@@ -104,7 +105,7 @@ export default function FreelanceMarketplace() {
               </select>
 
               {/* Price */}
-              <select className="w-full sm:w-44 h-10 px-3 text-sm sm:text-base font-[Open_Sans] text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md">
+              <select className="w-full sm:w-44 h-10 px-3 text-sm sm:text-base font-sans text-[#565D6D] bg-white border border-[#DEE1E6] rounded-md">
                 <option>Max. Price</option>
                 {prices.map((price, i) => (
                   <option key={i}>{price}</option>
@@ -113,10 +114,10 @@ export default function FreelanceMarketplace() {
 
               {/* Buttons */}
               <div className="flex gap-2 w-full sm:w-auto">
-                <button className="flex-1 sm:flex-none px-4 sm:px-5 h-10 font-[Open_Sans] text-sm sm:text-base font-medium text-white bg-[#3892E5] rounded-md hover:bg-[#155FA4]">
+                <button className="flex-1 sm:flex-none px-4 sm:px-5 h-10 font-sans text-sm sm:text-base font-medium text-white bg-[#3892E5] rounded-md hover:bg-[#155FA4]">
                   Apply Filters
                 </button>
-                <button className="flex-1 sm:flex-none px-4 h-10 font-[Open_Sans] text-sm sm:text-base font-medium text-[#565D6D] bg-transparent rounded-md">
+                <button className="flex-1 sm:flex-none px-4 h-10 font-sans text-sm sm:text-base font-medium text-[#565D6D] bg-transparent rounded-md">
                   Reset
                 </button>
               </div>
@@ -138,19 +139,19 @@ export default function FreelanceMarketplace() {
                 />
 
                 {/* Name */}
-                <h2 className="font-[Outfit] text-lg sm:text-xl font-semibold text-[#171A1F]">
+                <h2 className="font-sans text-lg sm:text-xl font-semibold text-[#171A1F]">
                   {freelancer.name}
                 </h2>
 
                 {/* Role */}
-                <p className="mt-1 text-sm sm:text-base font-[Open_Sans] text-[#565D6D]">
+                <p className="mt-1 text-sm sm:text-base font-sans text-[#565D6D]">
                   {freelancer.role}
                 </p>
 
                 {/* Rating */}
                 <div className="mt-2 flex items-center justify-center text-[#F59E0B]">
                   <Star className="w-4 h-4 fill-[#F59E0B]" />
-                  <span className="ml-1 text-sm font-[Open_Sans]">
+                  <span className="ml-1 text-sm font-sans">
                     {freelancer.rating} ({freelancer.reviews} reviews)
                   </span>
                 </div>
@@ -160,7 +161,7 @@ export default function FreelanceMarketplace() {
                   {freelancer.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 rounded-full bg-[#F3F4F6] text-xs sm:text-sm font-[Open_Sans] font-medium text-[#171A1F] hover:bg-[#424856] hover:text-white"
+                      className="px-3 py-1 rounded-full bg-[#F3F4F6] text-xs sm:text-sm font-sans font-medium text-[#171A1F] hover:bg-[#424856] hover:text-white"
                     >
                       {skill}
                     </span>
@@ -172,7 +173,7 @@ export default function FreelanceMarketplace() {
                   {freelancer.badges?.map((badge, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 rounded-full bg-[#E670AD33] text-xs sm:text-sm font-[Open_Sans] font-medium text-[#171A1F]"
+                      className="px-3 py-1 rounded-full bg-[#E670AD33] text-xs sm:text-sm font-sans font-medium text-[#171A1F]"
                     >
                       {badge}
                     </span>
@@ -180,7 +181,7 @@ export default function FreelanceMarketplace() {
                 </div>
 
                 {/* Button */}
-                <button className="mt-6 w-full py-2 text-sm sm:text-base font-[Open_Sans] font-medium text-white bg-[#3892E5] rounded-md hover:bg-[#155FA4]">
+                <button className="mt-6 w-full py-2 text-sm sm:text-base font-sans font-medium text-white bg-[#3892E5] rounded-md hover:bg-[#155FA4]">
                   View Profile
                 </button>
               </div>
