@@ -1,14 +1,12 @@
-import React from 'react'
-import '../App.css'
+import React from "react";
+import "../App.css";
 
 const Home = () => {
   return (
     <>
-    <h1 class="text-3xl font-bold ">
-    Hello world!
-     </h1>
+      <h1 class="text-3xl font-bold ">Hello world!</h1>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
