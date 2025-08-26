@@ -1,7 +1,7 @@
 import React from "react";
 import { Trophy } from "lucide-react";
-//import Navbar from "../components/Navbar";
-//import Sidebar from "../components/Sidebar";
+//import Navbar from "../components/Navbar.jsx";
+//import Sidebar from "../components/Sidebar.jsx";
 
 const games = [
   { id: "coding", title: "Coding Challenges", category: "Programming", difficulty: "Easy - Expert", desc: "Test your programming logic and problem-solving skills with diverse coding puzzles.", img: "/game1.jpg", rewardXP: 100 },
