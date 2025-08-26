@@ -1,11 +1,16 @@
-
-import "../App.css";
+import CallToAction from '../components/Home/CallToAction';
+import CommunityTestimonials from '../components/Home/CommunityTestimonials';
+import Header from '../components/Home/Header';
+import Main from '../components/Home/Main';
 
 const Home = () => {
   return (
-    <>
-      <h1 class="text-3xl font-bold ">Hello world!</h1>
-    </>
+    <div>
+      <Header />
+      <Main />
+      <CommunityTestimonials/>
+      <CallToAction/>
+    </div>
   );
 };
 
